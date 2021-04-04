@@ -1,0 +1,24 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th class="text-center"><b>Firstname</b></th>
+      <th class="text-center"><b>Lastname</b></th>
+      <th class="text-center"><b>Salary</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td>
+          <%= user.firstname %>
+        </td>
+        <td>
+          <%= user.lastname %>
+        </td>
+        <td>
+          <%= user.salary %>
+        </td>
+      </tr>
+    <% end %>
+  <tbody>
+</table>
