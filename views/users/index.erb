@@ -1,14 +1,28 @@
 <table class="table">
   <thead>
     <tr>
-      <th class="text-center"><b>Firstname</b></th>
-      <th class="text-center"><b>Lastname</b></th>
-      <th class="text-center"><b>Salary</b></th>
+      <th class="text-center">
+        <b>ID</b>
+      </th>
+      <th class="text-center">
+        <b>Firstname</b>
+      </th>
+      <th class="text-center">
+        <b>Lastname</b>
+      </th>
+      <th class="text-center">
+        <b>Salary</b>
+      </th>
     </tr>
   </thead>
   <tbody>
     <% @users.each do |user| %>
       <tr>
+        <td>
+          <a href="/find_user?id=<%= user.id %>">
+            <%= user.id %>
+          </a>
+        </td>
         <td>
           <%= user.firstname %>
         </td>
@@ -22,3 +36,5 @@
     <% end %>
   <tbody>
 </table>
+
+<a class="button" href="/">Create new user</a>

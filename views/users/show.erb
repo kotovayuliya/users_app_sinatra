@@ -1,0 +1,22 @@
+<table align="center" width="15%">
+  <tr>
+    <td align="center">
+      <b><%= @user.firstname %></b>
+    </td>
+    <td align="center">
+      <b><%= @user.lastname %></b>
+    </td>
+    <td align="center">
+      <%= @user.salary %>
+    </td>
+  </tr>
+  <tr>
+    <td colspan=3 align="center">
+      <a href="http://localhost:9292/edit?id=<%= @user.id %>">Update</a><br>
+      <form action="/users/delete?id=<%= @user.id %>" method="post">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete User?">
+      </form>
+    </td>
+  </tr>
+</table>
