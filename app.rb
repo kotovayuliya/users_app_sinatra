@@ -7,7 +7,7 @@ require_relative 'models/user.rb'
 require_relative 'establish_connection.rb'
 
 def render_users
-  @users = User.all
+  @users = User.all.order('salary DESC')
   erb 'users/index', binding
 end
 
